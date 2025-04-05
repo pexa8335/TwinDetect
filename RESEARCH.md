@@ -113,6 +113,3 @@ The combination of Digital Twins and Anomaly Detection techniques creates a powe
     
 3. **Safe testing environment**: Security tests and simulated attacks can be performed on the digital twin without risking the operational stability of the physical system.
     
-4. **Behavioral modeling**: Digital twins can generate normal behavior profiles that serve as baselines for anomaly detection algorithms.
-    
-5. **Contextual awareness**: The integration enables contextual anomaly detection by incorporating knowledge about the system's operational states and expected behaviors from the digital twin.
