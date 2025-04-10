@@ -39,7 +39,24 @@ pip install pandas numpy psutil scikit-learn joblib matplotlib
 python3 digital_twin.py
 ```
 
-6. Test the digital twin with the anomaly traffic generator.
+6. The dataset is too large so you need to download it.
+
+```bash
+FILE_ID=17xyuKBt5SWPsypWao4d7YrE1ImLY3O61
+FILE_NAME=dataset.zip
+
+CONFIRM=$(wget --quiet --save-cookies cookies.txt --keep-session-cookies --no-check-certificate \
+"https://docs.google.com/uc?export=download&id=${FILE_ID}" -O- | \
+sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1/p')
+
+wget --load-cookies cookies.txt "https://docs.google.com/uc?export=download&confirm=${CONFIRM}&id=${FILE_ID}" \
+-O ${FILE_NAME}
+
+rm -f cookies.txt
+unzip dataset.zip
+```
+
+7. Test the digital twin with the anomaly traffic generator.
 
 ```bash
 cd traffic_maker
