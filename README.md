@@ -1,10 +1,9 @@
 
 # **Real-time Anomaly Detection System for Apache2 Web Server**.
 
-## Set up.
+## ⚙️ Setup Instructions
 
-
-1. Download Apache2 & relevant library.
+### 1. Install Apache2 & Required Libraries.
 
 ```bash
 sudo apt update
@@ -13,33 +12,33 @@ sudo apt install -y apache2 python3-pip git nano
 sudo apt install python3-venv -y
 ```
 
-2. In your project directory (or wherever you prefer), create a virtual environment (e.g., named dgtwin - digital twin environment):
+### 2. Create and Activate a Virtual Environment.
 
 ```bash
 python3 -m venv dgtwin
 ```
 
-3. Activate venv.
+### 3. Activate venv.
 
 ```bash
 source dgtwin/bin/activate
 ```
 
-You will see (dgtwin) appear at the beginning of the command line, indicating that the virtual environment is active.
+>You will see (dgtwin) appear at the beginning of the command line, indicating that the virtual environment is active.
 
-4. **Install packages:** Now you can safely use pip (or pip3) because it will install into the virtual environment:
+### 4. Install Python Dependencies.
 
 ```bash
 pip install pandas numpy psutil scikit-learn joblib matplotlib 
 ```
 
-5. Implement digital twin to observe log.
+### 5. Download the Dataset (Large Files).
 
 ```bash
 python3 digital_twin.py
 ```
 
-6. The dataset is too large so you need to download it.
+### 6. The dataset is too large so you need to download it.
 
 ```bash
 FILE_ID=17xyuKBt5SWPsypWao4d7YrE1ImLY3O61
@@ -55,8 +54,9 @@ wget --load-cookies cookies.txt "https://docs.google.com/uc?export=download&conf
 rm -f cookies.txt
 unzip dataset.zip
 ```
+>📦 Dataset includes large Apache2 logs and preprocessed CSV files for anomaly detection.
 
-7. Test the digital twin with the anomaly traffic generator.
+### 7. Run the Digital Twin Observer.
 
 ```bash
 cd traffic_maker
