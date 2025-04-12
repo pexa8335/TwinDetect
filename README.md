@@ -64,7 +64,13 @@ python3 anomaly_maker.py
 ```
 
 ---
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+---
 > ✍️ _This README provides an overview of how to run the system. For workflow steps and module usage, see [`WORKFLOW.md`](./WORKFLOW.md)._
 
 > ✍️ _For detailed research notes, technical explanations, and results, see [`RESEARCH.md`](./RESEARCH.md)._
+
 
