@@ -10,7 +10,7 @@ import os
 
 def load_data(unlabeled_data, labeled_data):
     # Chỉ lấy 500k dòng từ dữ liệu không nhãn
-    df_unlabeled = pd.read_csv(unlabeled_data, nrows = 2_500_000, on_bad_lines='skip')
+    df_unlabeled = pd.read_csv(unlabeled_data, nrows = 500_000, on_bad_lines='skip')
     df_labeled = pd.read_csv(labeled_data)  #Test
     
     X_test = df_labeled.drop(columns='label')
@@ -23,7 +23,7 @@ def load_data(unlabeled_data, labeled_data):
     return X_train, X_test, y_test
 
 def train_isolation_forest(X_train):
-    iso_forest = IsolationForest(n_estimators=100, contamination=0.005, max_samples=256, random_state=42)
+    iso_forest = IsolationForest(n_estimators=100, contamination=0.05, max_samples=256, random_state=42)
     iso_forest.fit(X_train)
     return iso_forest
 

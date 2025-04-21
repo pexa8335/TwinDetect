@@ -2,7 +2,7 @@ import time
 import joblib
 import logging
 import feature_extraction
-from help import log_parser
+from helper import log_parser
 import pandas as pd
 import numpy as np
 import os
@@ -143,7 +143,7 @@ def monitor_logs():
                     
 
                     scores = model.decision_function(model_df) 
-                    preds = np.where(scores < -0.11047, -1, 1) #-0.11047 is the optimized threshold in the previous step
+                    preds = np.where(scores < -0.02181, -1, 1) #-0.11047 is the optimized threshold in the previous step
 
                     for i, pred in enumerate(preds):
                         if pred == -1:  # Bất thường được phát hiện
