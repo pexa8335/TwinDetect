@@ -1,5 +1,5 @@
 
-# **Real-time Anomaly Detection System for Apache2 Web Server**.
+# **AI-driven Digital Twin for Real-time Anomaly Detection in Apache2**.
 
 ## ⚙️ Setup Instructions
 
